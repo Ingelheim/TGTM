@@ -69,7 +69,19 @@ class RecordButtonTest : XCTestCase {
     func testThatRecordCallbackGetsExecutedWhenStartingRecording() {
         button.currentState = .BS_COUNTDOWN
         var expectation = expectationWithDescription("should call record callback")
-        button.recordCallback = {
+        button.recordStartCallback = {
+            expectation.fulfill()
+        }
+        
+        button.handleClick()
+        
+        waitForExpectationsWithTimeout(5.0, handler: nil)
+    }
+    
+    func testThatRecordCallbackGetsExecutedWhenStopRecording() {
+        button.currentState = .BS_RECORDING
+        var expectation = expectationWithDescription("should call record callback")
+        button.recordDoneCallback = {
             expectation.fulfill()
         }
         

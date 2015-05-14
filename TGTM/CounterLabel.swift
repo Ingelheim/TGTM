@@ -5,6 +5,7 @@ class CounterLabel : UILabel {
     var counting = false
     var timer : NSTimer?
     var onFinished : (() -> Void)?
+    var alsoUpdate : UILabel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,15 +25,20 @@ class CounterLabel : UILabel {
     func startCounter(onFinished : (() -> Void)) {
         hidden = false
         self.counting = true
-        self.text = "\(count)"
+        setNewText("\(count)")
         self.onFinished = onFinished
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
     }
     
+    func setNewText(newText : String) {
+        self.text = newText
+        alsoUpdate?.text = newText
+    }
+    
     func updateTimer() {
         self.count -= 1
-        self.text = "\(count)"
+        setNewText("\(count)")
         
         if self.count == 0 {
             self.timer?.invalidate()
@@ -44,5 +50,7 @@ class CounterLabel : UILabel {
     private func setupUI() {
         hidden = true
         textAlignment = .Center
+        font = UIFont(name: "SignPainter", size: 50)
+        textColor = UIColor.whiteColor()
     }
 }

@@ -85,6 +85,8 @@ typedef struct _NSZone NSZone;
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
+@import ObjectiveC;
+@import MessageUI;
 @import AVFoundation;
 #endif
 
@@ -115,10 +117,12 @@ SWIFT_CLASS("_TtC4TGTM12CounterLabel")
 @property (nonatomic) BOOL counting;
 @property (nonatomic) NSTimer * __nullable timer;
 @property (nonatomic, copy) void (^ __nullable onFinished)(void);
+@property (nonatomic) UILabel * __nullable alsoUpdate;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (CounterLabel * __nonnull)withCount:(NSInteger)count;
 - (void)startCounter:(void (^ __nonnull)(void))onFinished;
+- (void)setNewText:(NSString * __nonnull)newText;
 - (void)updateTimer;
 @end
 
@@ -128,21 +132,29 @@ SWIFT_CLASS("_TtC4TGTM12RecordButton")
 @property (nonatomic) CounterLabel * __nullable countDownLabel;
 @property (nonatomic) NSInteger countdownTime;
 @property (nonatomic) NSInteger recordCount;
-@property (nonatomic, copy) void (^ __nullable recordCallback)(void);
+@property (nonatomic, copy) void (^ __nullable recordStartCallback)(void);
+@property (nonatomic, copy) void (^ __nullable recordDoneCallback)(void);
+@property (nonatomic) UILabel * __nullable bigLabel;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (void)handleClick;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIView;
+@class ShareDialog;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
 @interface TGTMViewController : UIViewController
 @property (nonatomic) RecordButton * __nullable recordButton;
 @property (nonatomic) UIView * __nullable flashImage;
+@property (nonatomic) UILabel * __nullable countdownLabel;
+@property (nonatomic) UIButton * __nullable shareButton;
+@property (nonatomic) ShareDialog * __nullable shareDialog;
+@property (nonatomic) UIButton * __nullable undo;
 - (void)viewDidLoad;
 - (BOOL)prefersStatusBarHidden;
+- (void)toggleShareDialog;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -156,6 +168,28 @@ SWIFT_CLASS("_TtC4TGTM20RecordViewController")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC4TGTM11ShareDialog")
+@interface ShareDialog : UIImageView
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MFMessageComposeViewController;
+
+SWIFT_CLASS("_TtC4TGTM18SocialMediaManager")
+@interface SocialMediaManager : NSObject <MFMessageComposeViewControllerDelegate>
+@property (nonatomic, copy) NSString * __nonnull whatsAppURL;
+@property (nonatomic, readonly) UIApplication * __nonnull sharedApplication;
+@property (nonatomic) MFMessageComposeViewController * __nonnull messageComposeVC;
+@property (nonatomic) UIViewController * __nullable parentVC;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithParentVC:(UIViewController * __nonnull)parentVC OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)canShareWithWhatsapp;
+- (void)shareWithWhatsapp;
+- (void)shareWithSMS;
+- (void)messageComposeViewController:(MFMessageComposeViewController * __null_unspecified)controller didFinishWithResult:(MessageComposeResult)result;
+@end
+
 @class AVCaptureDevice;
 
 SWIFT_CLASS("_TtC4TGTM18TGTMCaptureSession")
@@ -163,7 +197,6 @@ SWIFT_CLASS("_TtC4TGTM18TGTMCaptureSession")
 @property (nonatomic) AVCaptureDevice * __nullable captureDevice;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)setGeneralSettings;
-- (void)configureDevice;
 - (void)beginSession;
 @end
 

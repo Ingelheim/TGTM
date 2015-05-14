@@ -21,6 +21,14 @@
 		80756B961B04A67D009D5A90 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B951B04A67D009D5A90 /* CounterLabel.swift */; };
 		80756B971B04A67D009D5A90 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B951B04A67D009D5A90 /* CounterLabel.swift */; };
 		80756B9A1B04A68E009D5A90 /* CounterLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B981B04A68E009D5A90 /* CounterLabelTest.swift */; };
+		80756B9C1B04D72A009D5A90 /* SocialMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B9B1B04D72A009D5A90 /* SocialMediaManager.swift */; };
+		80756B9D1B04D72A009D5A90 /* SocialMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B9B1B04D72A009D5A90 /* SocialMediaManager.swift */; };
+		80756BA11B04DDB6009D5A90 /* SignPainter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80756BA01B04DDB6009D5A90 /* SignPainter.ttf */; };
+		80756BA21B04DDB6009D5A90 /* SignPainter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80756BA01B04DDB6009D5A90 /* SignPainter.ttf */; };
+		80756BA41B04F119009D5A90 /* TGTMCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */; };
+		80756BA51B04F119009D5A90 /* TGTMCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */; };
+		80756BAB1B04F1AE009D5A90 /* ShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */; };
+		80756BAC1B04F1AE009D5A90 /* ShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,10 @@
 		80756B921B04A518009D5A90 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		80756B951B04A67D009D5A90 /* CounterLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
 		80756B981B04A68E009D5A90 /* CounterLabelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterLabelTest.swift; sourceTree = "<group>"; };
+		80756B9B1B04D72A009D5A90 /* SocialMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaManager.swift; sourceTree = "<group>"; };
+		80756BA01B04DDB6009D5A90 /* SignPainter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.ttf; sourceTree = "<group>"; };
+		80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTMCaptureSession.swift; sourceTree = "<group>"; };
+		80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,15 +101,12 @@
 		80756B691B049417009D5A90 /* TGTM */ = {
 			isa = PBXGroup;
 			children = (
-				80756B6C1B049417009D5A90 /* AppDelegate.swift */,
-				80756B6E1B049417009D5A90 /* RecordViewController.swift */,
-				80756B701B049417009D5A90 /* Main.storyboard */,
-				80756B731B049417009D5A90 /* Images.xcassets */,
-				80756B751B049417009D5A90 /* LaunchScreen.xib */,
+				80756BA91B04F186009D5A90 /* UIElements */,
+				80756BA81B04F17C009D5A90 /* Managers */,
+				80756BA71B04F16C009D5A90 /* ViewController */,
+				80756BA61B04F15D009D5A90 /* Video */,
+				80756B9E1B04DCB6009D5A90 /* Resources */,
 				80756B6A1B049417009D5A90 /* Supporting Files */,
-				80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */,
-				80756B921B04A518009D5A90 /* RecordButton.swift */,
-				80756B951B04A67D009D5A90 /* CounterLabel.swift */,
 			);
 			path = TGTM;
 			sourceTree = "<group>";
@@ -105,6 +114,9 @@
 		80756B6A1B049417009D5A90 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80756B701B049417009D5A90 /* Main.storyboard */,
+				80756B751B049417009D5A90 /* LaunchScreen.xib */,
+				80756B6C1B049417009D5A90 /* AppDelegate.swift */,
 				80756B6B1B049417009D5A90 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -126,6 +138,58 @@
 				80756B811B049417009D5A90 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80756B9E1B04DCB6009D5A90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80756B731B049417009D5A90 /* Images.xcassets */,
+				80756B9F1B04DCBD009D5A90 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		80756B9F1B04DCBD009D5A90 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				80756BA01B04DDB6009D5A90 /* SignPainter.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		80756BA61B04F15D009D5A90 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		80756BA71B04F16C009D5A90 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */,
+				80756B6E1B049417009D5A90 /* RecordViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		80756BA81B04F17C009D5A90 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				80756B9B1B04D72A009D5A90 /* SocialMediaManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		80756BA91B04F186009D5A90 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				80756B921B04A518009D5A90 /* RecordButton.swift */,
+				80756B951B04A67D009D5A90 /* CounterLabel.swift */,
+				80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */,
+			);
+			name = UIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80756B721B049417009D5A90 /* Main.storyboard in Resources */,
+				80756BA11B04DDB6009D5A90 /* SignPainter.ttf in Resources */,
 				80756B771B049417009D5A90 /* LaunchScreen.xib in Resources */,
 				80756B741B049417009D5A90 /* Images.xcassets in Resources */,
 			);
@@ -218,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80756BA21B04DDB6009D5A90 /* SignPainter.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,11 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80756BA41B04F119009D5A90 /* TGTMCaptureSession.swift in Sources */,
 				80756B931B04A518009D5A90 /* RecordButton.swift in Sources */,
 				80756B961B04A67D009D5A90 /* CounterLabel.swift in Sources */,
 				80756B6F1B049417009D5A90 /* RecordViewController.swift in Sources */,
 				80756B6D1B049417009D5A90 /* AppDelegate.swift in Sources */,
 				80756B8D1B049BFA009D5A90 /* TGTMViewController.swift in Sources */,
+				80756B9C1B04D72A009D5A90 /* SocialMediaManager.swift in Sources */,
+				80756BAB1B04F1AE009D5A90 /* ShareDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,11 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				80756B901B04A145009D5A90 /* RecordViewController.swift in Sources */,
+				80756BAC1B04F1AE009D5A90 /* ShareDialog.swift in Sources */,
 				80756B8F1B04A13C009D5A90 /* RecordButtonTest.swift in Sources */,
 				80756B911B04A152009D5A90 /* TGTMViewController.swift in Sources */,
 				80756B941B04A518009D5A90 /* RecordButton.swift in Sources */,
+				80756B9D1B04D72A009D5A90 /* SocialMediaManager.swift in Sources */,
 				80756B9A1B04A68E009D5A90 /* CounterLabelTest.swift in Sources */,
 				80756B971B04A67D009D5A90 /* CounterLabel.swift in Sources */,
+				80756BA51B04F119009D5A90 /* TGTMCaptureSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

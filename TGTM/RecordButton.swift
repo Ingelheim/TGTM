@@ -15,7 +15,9 @@ class RecordButton : UIButton {
     var countDownLabel : CounterLabel?
     var countdownTime = 3
     var recordCount = 5
-    var recordCallback : (() -> Void)?
+    var recordStartCallback : (() -> Void)?
+    var recordDoneCallback : (() -> Void)?
+    var bigLabel : UILabel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,7 +25,7 @@ class RecordButton : UIButton {
         self.enabled = true
         setCurrenImage()
         
-        countDownLabel = CounterLabel(frame: CGRectMake(0, 34, 88, 20)).withCount(countdownTime)
+        countDownLabel = CounterLabel(frame: CGRectMake(-3, 24, 88, 40)).withCount(countdownTime)
         self.addSubview(countDownLabel!)
     }
     
@@ -37,6 +39,7 @@ class RecordButton : UIButton {
             startRecording()
         case .BS_RECORDING :
             currentState = .BS_PLAY
+            stopRecording()
         case .BS_PLAY :
             currentState = .BS_PLAY
         }
@@ -54,13 +57,22 @@ class RecordButton : UIButton {
     
     private func startCounter() {
         self.userInteractionEnabled = false
+        bigLabel?.hidden = false
+        countDownLabel?.alsoUpdate = bigLabel
         countDownLabel?.startCounter(handleClick)
     }
     
     private func startRecording() {
-        recordCallback?()
+        recordStartCallback?()
+        bigLabel?.hidden = true
+        countDownLabel?.alsoUpdate = nil
         self.userInteractionEnabled = false
         countDownLabel = countDownLabel?.withCount(self.recordCount)
         countDownLabel?.startCounter(handleClick)
+    }
+    
+    private func stopRecording() {
+
+        recordDoneCallback?()
     }
 }
