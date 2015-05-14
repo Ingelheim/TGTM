@@ -4,28 +4,28 @@ provides:
 nominals:
 - "C4TGTM11AppDelegate"
 class-members:
-- "applicationDidBecomeActive"
 - "applicationWillResignActive"
-- "applicationWillEnterForeground"
-- "applicationWillTerminate"
+- "applicationDidBecomeActive"
 - "window"
+- "applicationWillEnterForeground"
 - "applicationDidEnterBackground"
 - "application"
+- "applicationWillTerminate"
 top-level:
+- "UIResponder"
+- "UIApplicationDelegate"
 - "NSObject"
 - "UIWindow"
+- "Bool"
 - "UIApplication"
 - !private "BooleanLiteralType"
-- "Bool"
-- "UIApplicationDelegate"
 - "AnyObject"
-- "UIResponder"
 member-access:
-- "C4TGTM11AppDelegate"
 - "PSs9AnyObject"
 - "PSo21UIApplicationDelegate"
-- "CSo11UIResponder"
 - "CSo8NSObject"
+- "C4TGTM11AppDelegate"
+- "CSo11UIResponder"
 dynamic-lookup:
 cross-module:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Swift.swiftmodule"
@@ -37,3 +37,4 @@ cross-module:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Security.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreAudio.swiftmodule"

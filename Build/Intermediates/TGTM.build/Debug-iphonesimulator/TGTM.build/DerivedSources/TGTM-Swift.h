@@ -134,11 +134,13 @@ SWIFT_CLASS("_TtC4TGTM12RecordButton")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
 @interface TGTMViewController : UIViewController
 @property (nonatomic) RecordButton * __nullable recordButton;
+@property (nonatomic) UIView * __nullable flashImage;
 - (void)viewDidLoad;
 - (BOOL)prefersStatusBarHidden;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -150,6 +152,7 @@ SWIFT_CLASS("_TtC4TGTM20RecordViewController")
 @interface RecordViewController : TGTMViewController
 - (void)viewDidLoad;
 - (void)initVideo;
+- (void)flash;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

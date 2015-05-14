@@ -51,6 +51,7 @@ class RecordViewController: TGTMViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordButton?.recordCallback = startRecording
         initVideo()
     }
     
@@ -66,5 +67,28 @@ class RecordViewController: TGTMViewController {
         previewLayer?.frame = video.layer.frame
 
         captureSession.startRunning()
+    }
+    
+    private func animateFlashIn() {
+        flashImage?.hidden = false
+        UIView.animateWithDuration(0.15, animations: { () -> Void in
+            self.flashImage?.alpha = 1.0
+            }) { (done) -> Void in
+                self.animateFlashOut()
+        }
+    }
+    
+    private func animateFlashOut() {
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.flashImage?.alpha = 0.0
+            }) { (done) -> Void in
+                self.flashImage?.hidden = true
+        }
+    }
+    
+    private func startRecording() {
+        println("recording")
+        
+        animateFlashIn()
     }
 }

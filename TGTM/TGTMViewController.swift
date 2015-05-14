@@ -2,6 +2,7 @@ import UIKit
 
 class TGTMViewController : UIViewController {
     var recordButton : RecordButton?
+    var flashImage : UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class TGTMViewController : UIViewController {
         createLogoBar()
         createBottomBar()
         createRecordButton()
+        createFlashImage()
     }
     
     private func createRyanImage() {
@@ -42,5 +44,13 @@ class TGTMViewController : UIViewController {
     private func createRecordButton() {
         recordButton = RecordButton(frame: CGRect(x: self.view.frame.midX - 44, y: self.view.frame.maxY - 113, width: 88, height: 88))
         self.view.addSubview(recordButton!)
+    }
+    
+    private func createFlashImage() {
+        flashImage = UIView(frame: self.view.frame)
+        flashImage?.backgroundColor = UIColor.whiteColor()
+        flashImage?.alpha = 0.0
+        flashImage?.hidden = true
+        self.view.addSubview(flashImage!)
     }
 }
