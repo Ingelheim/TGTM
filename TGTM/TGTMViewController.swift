@@ -15,9 +15,16 @@ class TGTMViewController : UIViewController {
     }
     
     private func setupUI() {
+        createRyanImage()
         createLogoBar()
         createBottomBar()
         createRecordButton()
+    }
+    
+    private func createRyanImage() {
+        var ryan = UIImageView(frame: CGRect(x: 0, y: 84, width: self.view.frame.width, height: 514))
+        ryan.image = UIImage(named: "Ryan")
+        self.view.addSubview(ryan)
     }
     
     private func createLogoBar() {

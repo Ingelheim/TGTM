@@ -15,6 +15,7 @@ class RecordButton : UIButton {
     var countDownLabel : CounterLabel?
     var countdownTime = 3
     var recordCount = 5
+    var recordCallback : (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,6 +58,7 @@ class RecordButton : UIButton {
     }
     
     private func startRecording() {
+        recordCallback?()
         self.userInteractionEnabled = false
         countDownLabel = countDownLabel?.withCount(self.recordCount)
         countDownLabel?.startCounter(handleClick)

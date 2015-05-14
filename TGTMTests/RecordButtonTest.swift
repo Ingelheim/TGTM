@@ -65,4 +65,16 @@ class RecordButtonTest : XCTestCase {
         XCTAssertTrue(button.userInteractionEnabled)
         XCTAssertEqual(button.imageForState(UIControlState.Normal)!, UIImage(named: "RecordButtonPlay")!)
     }
+    
+    func testThatRecordCallbackGetsExecutedWhenStartingRecording() {
+        button.currentState = .BS_COUNTDOWN
+        var expectation = expectationWithDescription("should call record callback")
+        button.recordCallback = {
+            expectation.fulfill()
+        }
+        
+        button.handleClick()
+        
+        waitForExpectationsWithTimeout(5.0, handler: nil)
+    }
 }

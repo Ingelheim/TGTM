@@ -85,6 +85,7 @@ typedef struct _NSZone NSZone;
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
+@import AVFoundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -127,6 +128,7 @@ SWIFT_CLASS("_TtC4TGTM12RecordButton")
 @property (nonatomic) CounterLabel * __nullable countDownLabel;
 @property (nonatomic) NSInteger countdownTime;
 @property (nonatomic) NSInteger recordCount;
+@property (nonatomic, copy) void (^ __nullable recordCallback)(void);
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (void)handleClick;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -147,8 +149,20 @@ SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
 SWIFT_CLASS("_TtC4TGTM20RecordViewController")
 @interface RecordViewController : TGTMViewController
 - (void)viewDidLoad;
+- (void)initVideo;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class AVCaptureDevice;
+
+SWIFT_CLASS("_TtC4TGTM18TGTMCaptureSession")
+@interface TGTMCaptureSession : AVCaptureSession
+@property (nonatomic) AVCaptureDevice * __nullable captureDevice;
+- (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)setGeneralSettings;
+- (void)configureDevice;
+- (void)beginSession;
 @end
 
 
