@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		80756B6D1B049417009D5A90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B6C1B049417009D5A90 /* AppDelegate.swift */; };
-		80756B6F1B049417009D5A90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B6E1B049417009D5A90 /* ViewController.swift */; };
+		80756B6F1B049417009D5A90 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B6E1B049417009D5A90 /* RecordViewController.swift */; };
 		80756B721B049417009D5A90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80756B701B049417009D5A90 /* Main.storyboard */; };
 		80756B741B049417009D5A90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80756B731B049417009D5A90 /* Images.xcassets */; };
 		80756B771B049417009D5A90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80756B751B049417009D5A90 /* LaunchScreen.xib */; };
-		80756B831B049417009D5A90 /* TGTMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B821B049417009D5A90 /* TGTMTests.swift */; };
+		80756B8D1B049BFA009D5A90 /* TGTMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */; };
+		80756B8F1B04A13C009D5A90 /* RecordButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B8E1B04A13C009D5A90 /* RecordButtonTest.swift */; };
+		80756B901B04A145009D5A90 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B6E1B049417009D5A90 /* RecordViewController.swift */; };
+		80756B911B04A152009D5A90 /* TGTMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */; };
+		80756B931B04A518009D5A90 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B921B04A518009D5A90 /* RecordButton.swift */; };
+		80756B941B04A518009D5A90 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B921B04A518009D5A90 /* RecordButton.swift */; };
+		80756B961B04A67D009D5A90 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B951B04A67D009D5A90 /* CounterLabel.swift */; };
+		80756B971B04A67D009D5A90 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B951B04A67D009D5A90 /* CounterLabel.swift */; };
+		80756B9A1B04A68E009D5A90 /* CounterLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756B981B04A68E009D5A90 /* CounterLabelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +37,17 @@
 		80756B671B049417009D5A90 /* TGTM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80756B6B1B049417009D5A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80756B6C1B049417009D5A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80756B6E1B049417009D5A90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80756B6E1B049417009D5A90 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		80756B711B049417009D5A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80756B731B049417009D5A90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80756B761B049417009D5A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		80756B7C1B049417009D5A90 /* TGTMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TGTMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80756B811B049417009D5A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80756B821B049417009D5A90 /* TGTMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGTMTests.swift; sourceTree = "<group>"; };
+		80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTMViewController.swift; sourceTree = "<group>"; };
+		80756B8E1B04A13C009D5A90 /* RecordButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButtonTest.swift; sourceTree = "<group>"; };
+		80756B921B04A518009D5A90 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		80756B951B04A67D009D5A90 /* CounterLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
+		80756B981B04A68E009D5A90 /* CounterLabelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterLabelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				80756B6C1B049417009D5A90 /* AppDelegate.swift */,
-				80756B6E1B049417009D5A90 /* ViewController.swift */,
+				80756B6E1B049417009D5A90 /* RecordViewController.swift */,
 				80756B701B049417009D5A90 /* Main.storyboard */,
 				80756B731B049417009D5A90 /* Images.xcassets */,
 				80756B751B049417009D5A90 /* LaunchScreen.xib */,
 				80756B6A1B049417009D5A90 /* Supporting Files */,
+				80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */,
+				80756B921B04A518009D5A90 /* RecordButton.swift */,
+				80756B951B04A67D009D5A90 /* CounterLabel.swift */,
 			);
 			path = TGTM;
 			sourceTree = "<group>";
@@ -98,8 +113,9 @@
 		80756B7F1B049417009D5A90 /* TGTMTests */ = {
 			isa = PBXGroup;
 			children = (
-				80756B821B049417009D5A90 /* TGTMTests.swift */,
 				80756B801B049417009D5A90 /* Supporting Files */,
+				80756B8E1B04A13C009D5A90 /* RecordButtonTest.swift */,
+				80756B981B04A68E009D5A90 /* CounterLabelTest.swift */,
 			);
 			path = TGTMTests;
 			sourceTree = "<group>";
@@ -212,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80756B6F1B049417009D5A90 /* ViewController.swift in Sources */,
+				80756B931B04A518009D5A90 /* RecordButton.swift in Sources */,
+				80756B961B04A67D009D5A90 /* CounterLabel.swift in Sources */,
+				80756B6F1B049417009D5A90 /* RecordViewController.swift in Sources */,
 				80756B6D1B049417009D5A90 /* AppDelegate.swift in Sources */,
+				80756B8D1B049BFA009D5A90 /* TGTMViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80756B831B049417009D5A90 /* TGTMTests.swift in Sources */,
+				80756B901B04A145009D5A90 /* RecordViewController.swift in Sources */,
+				80756B8F1B04A13C009D5A90 /* RecordButtonTest.swift in Sources */,
+				80756B911B04A152009D5A90 /* TGTMViewController.swift in Sources */,
+				80756B941B04A518009D5A90 /* RecordButton.swift in Sources */,
+				80756B9A1B04A68E009D5A90 /* CounterLabelTest.swift in Sources */,
+				80756B971B04A67D009D5A90 /* CounterLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

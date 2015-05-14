@@ -84,6 +84,7 @@ typedef struct _NSZone NSZone;
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -104,15 +105,51 @@ SWIFT_CLASS("_TtC4TGTM11AppDelegate")
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
+@class NSTimer;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC4TGTM14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC4TGTM12CounterLabel")
+@interface CounterLabel : UILabel
+@property (nonatomic) NSInteger count;
+@property (nonatomic) BOOL counting;
+@property (nonatomic) NSTimer * __nullable timer;
+@property (nonatomic, copy) void (^ __nullable onFinished)(void);
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (CounterLabel * __nonnull)withCount:(NSInteger)count;
+- (void)startCounter:(void (^ __nonnull)(void))onFinished;
+- (void)updateTimer;
+@end
+
+
+SWIFT_CLASS("_TtC4TGTM12RecordButton")
+@interface RecordButton : UIButton
+@property (nonatomic) CounterLabel * __nullable countDownLabel;
+@property (nonatomic) NSInteger countdownTime;
+@property (nonatomic) NSInteger recordCount;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (void)handleClick;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSBundle;
+
+SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
+@interface TGTMViewController : UIViewController
+@property (nonatomic) RecordButton * __nullable recordButton;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (BOOL)prefersStatusBarHidden;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+SWIFT_CLASS("_TtC4TGTM20RecordViewController")
+@interface RecordViewController : TGTMViewController
+- (void)viewDidLoad;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 #pragma clang diagnostic pop
