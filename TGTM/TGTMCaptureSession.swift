@@ -2,13 +2,14 @@ import UIKit
 import AVFoundation
 
 class TGTMCaptureSession : AVCaptureSession {
-    var captureDevice : AVCaptureDevice?
+    var captureVideoDevice : AVCaptureDevice?
+    var captureAudioDevice : AVCaptureDevice?
     
     override init() {
         super.init()
         setGeneralSettings()
         
-        if captureDevice != nil {
+        if bothDevicesSet() {
             beginSession()
         }
     }
@@ -17,22 +18,51 @@ class TGTMCaptureSession : AVCaptureSession {
         sessionPreset = AVCaptureSessionPresetMedium
         let devices = AVCaptureDevice.devices()
         
-        // Loop through all the capture devices on this phone
         for device in devices {
-            // Make sure this particular device supports video
-            if (device.hasMediaType(AVMediaTypeVideo)) {
-                // Finally check the position and confirm we've got the back camera
-                if(device.position == AVCaptureDevicePosition.Front) {
-                    println("RECORDING FRONT")
-                    captureDevice = device as? AVCaptureDevice
+            if (isVideo(device)) {
+                if(isFrontCamera(device)) {
+                    setCamera(device)
                 }
             }
         }
+        
+        if let audioDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeAudio) {
+            setMicrophone(audioDevice)
+        }
     }
     
-    func beginSession() {
+    private func isVideo(device: AnyObject) -> Bool {
+        return device.hasMediaType(AVMediaTypeVideo)
+    }
+    
+    private func isFrontCamera(device: AnyObject) -> Bool {
+        return device.position == AVCaptureDevicePosition.Front
+    }
+    
+    private func setCamera(device: AnyObject) {
+        captureVideoDevice = device as? AVCaptureDevice
+    }
+    
+    private func setMicrophone(device: AnyObject) {
+        captureAudioDevice = device as? AVCaptureDevice
+    }
+    
+    private func bothDevicesSet() -> Bool {
+        return captureAudioDevice != nil && captureVideoDevice != nil
+    }
+    
+    private func addCamera() {
         var err : NSError? = nil
-        self.addInput(AVCaptureDeviceInput(device: captureDevice!, error: &err))
-        println("Session started")
+        self.addInput(AVCaptureDeviceInput(device: captureVideoDevice!, error: &err))
+    }
+    
+    private func addMicrophone() {
+        var err : NSError? = nil
+        self.addInput(AVCaptureDeviceInput(device: captureAudioDevice!, error: &err))
+    }
+    
+    private func beginSession() {
+        addCamera()
+        addMicrophone()
     }
 }

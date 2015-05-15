@@ -194,10 +194,10 @@ SWIFT_CLASS("_TtC4TGTM18SocialMediaManager")
 
 SWIFT_CLASS("_TtC4TGTM18TGTMCaptureSession")
 @interface TGTMCaptureSession : AVCaptureSession
-@property (nonatomic) AVCaptureDevice * __nullable captureDevice;
+@property (nonatomic) AVCaptureDevice * __nullable captureVideoDevice;
+@property (nonatomic) AVCaptureDevice * __nullable captureAudioDevice;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)setGeneralSettings;
-- (void)beginSession;
 @end
 
 
