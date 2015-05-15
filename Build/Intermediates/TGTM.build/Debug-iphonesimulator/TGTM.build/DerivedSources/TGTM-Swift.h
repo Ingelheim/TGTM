@@ -141,6 +141,7 @@ SWIFT_CLASS("_TtC4TGTM12RecordButton")
 @end
 
 @class UIView;
+@class ShareDialog;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
@@ -148,8 +149,12 @@ SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
 @property (nonatomic) RecordButton * __nullable recordButton;
 @property (nonatomic) UIView * __nullable flashImage;
 @property (nonatomic) UILabel * __nullable countdownLabel;
+@property (nonatomic) UIButton * __nullable shareButton;
+@property (nonatomic) ShareDialog * __nullable shareDialog;
+@property (nonatomic) UIButton * __nullable undo;
 - (void)viewDidLoad;
 - (BOOL)prefersStatusBarHidden;
+- (void)toggleShareDialog;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -192,7 +197,6 @@ SWIFT_CLASS("_TtC4TGTM18TGTMCaptureSession")
 @property (nonatomic) AVCaptureDevice * __nullable captureDevice;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)setGeneralSettings;
-- (void)configureDevice;
 - (void)beginSession;
 @end
 

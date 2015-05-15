@@ -1,10 +1,12 @@
 version: "Apple Swift version 1.2 (swiftlang-602.0.49.6 clang-602.0.49)"
-options: "618a18b3cdb344e7cf387ca33b9b4b9e"
+options: "356accc227c4d33810f00d53fc9aa3ea"
 inputs: 
 - "/Users/Lukas/Desktop/TGTM/TGTM/RecordViewController.swift"
+- "/Users/Lukas/Desktop/TGTM/TGTM/ShareDialog.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTMTests/RecordButtonTest.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/TGTMViewController.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/RecordButton.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/SocialMediaManager.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTMTests/CounterLabelTest.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/CounterLabel.swift"
+- "/Users/Lukas/Desktop/TGTM/TGTM/TGTMCaptureSession.swift"
