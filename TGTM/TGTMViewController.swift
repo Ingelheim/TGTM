@@ -61,6 +61,23 @@ class TGTMViewController : UIViewController {
     }
     
     func toggleShareDialog() {
+        
+        
+//        if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"whatsapp://app"]]){
+//            
+//            NSString    *savePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mov"];
+//            
+//            _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:savePath]];
+//            
+//            _documentInteractionController.UTI = @"net.whatsapp.movie";
+//            
+//            _documentInteractionController.delegate = (id)self;
+//            
+//            [_documentInteractionController presentOpenInMenuFromRect:CGRectMake(0, 0, 0, 0) inView:self.view animated: YES];
+//        } else {
+//            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"WhatsApp Not Installed." message:@" WhatsApp is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//            [alert show];
+//        }
         shareDialog!.hidden = !shareDialog!.hidden
     }
     

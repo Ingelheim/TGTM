@@ -29,6 +29,8 @@
 		80756BA51B04F119009D5A90 /* TGTMCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */; };
 		80756BAB1B04F1AE009D5A90 /* ShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */; };
 		80756BAC1B04F1AE009D5A90 /* ShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */; };
+		80EEB25A1B063D0B00A32BF9 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 80EEB2591B063D0B00A32BF9 /* test.mov */; };
+		80EEB25B1B063D0B00A32BF9 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 80EEB2591B063D0B00A32BF9 /* test.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		80756BA01B04DDB6009D5A90 /* SignPainter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.ttf; sourceTree = "<group>"; };
 		80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTMCaptureSession.swift; sourceTree = "<group>"; };
 		80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareDialog.swift; sourceTree = "<group>"; };
+		80EEB2591B063D0B00A32BF9 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		80756B691B049417009D5A90 /* TGTM */ = {
 			isa = PBXGroup;
 			children = (
+				80EEB2591B063D0B00A32BF9 /* test.mov */,
 				80756BA91B04F186009D5A90 /* UIElements */,
 				80756BA81B04F17C009D5A90 /* Managers */,
 				80756BA71B04F16C009D5A90 /* ViewController */,
@@ -275,6 +279,7 @@
 				80756B721B049417009D5A90 /* Main.storyboard in Resources */,
 				80756BA11B04DDB6009D5A90 /* SignPainter.ttf in Resources */,
 				80756B771B049417009D5A90 /* LaunchScreen.xib in Resources */,
+				80EEB25A1B063D0B00A32BF9 /* test.mov in Resources */,
 				80756B741B049417009D5A90 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80EEB25B1B063D0B00A32BF9 /* test.mov in Resources */,
 				80756BA21B04DDB6009D5A90 /* SignPainter.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +511,7 @@
 				80756B881B049417009D5A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80756B891B049417009D5A90 /* Build configuration list for PBXNativeTarget "TGTMTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +520,7 @@
 				80756B8B1B049417009D5A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

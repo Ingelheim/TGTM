@@ -159,9 +159,11 @@ SWIFT_CLASS("_TtC4TGTM18TGTMViewController")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class TGTMCaptureSession;
 
 SWIFT_CLASS("_TtC4TGTM20RecordViewController")
 @interface RecordViewController : TGTMViewController
+@property (nonatomic) TGTMCaptureSession * __nullable captureSession;
 - (void)viewDidLoad;
 - (void)initVideo;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -176,10 +178,12 @@ SWIFT_CLASS("_TtC4TGTM11ShareDialog")
 @end
 
 @class MFMessageComposeViewController;
+@class NSURL;
 
 SWIFT_CLASS("_TtC4TGTM18SocialMediaManager")
-@interface SocialMediaManager : NSObject <MFMessageComposeViewControllerDelegate>
+@interface SocialMediaManager : NSObject <MFMessageComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate>
 @property (nonatomic, copy) NSString * __nonnull whatsAppURL;
+@property (nonatomic, copy) NSString * __nonnull whatsAppTest;
 @property (nonatomic, readonly) UIApplication * __nonnull sharedApplication;
 @property (nonatomic) MFMessageComposeViewController * __nonnull messageComposeVC;
 @property (nonatomic) UIViewController * __nullable parentVC;
@@ -188,16 +192,28 @@ SWIFT_CLASS("_TtC4TGTM18SocialMediaManager")
 - (void)shareWithWhatsapp;
 - (void)shareWithSMS;
 - (void)messageComposeViewController:(MFMessageComposeViewController * __null_unspecified)controller didFinishWithResult:(MessageComposeResult)result;
+- (void)openShareDialog:(NSURL * __nonnull)url;
 @end
 
 @class AVCaptureDevice;
+@class AVCaptureMovieFileOutput;
+@class CALayer;
+@class AVCaptureFileOutput;
+@class NSError;
 
 SWIFT_CLASS("_TtC4TGTM18TGTMCaptureSession")
-@interface TGTMCaptureSession : AVCaptureSession
+@interface TGTMCaptureSession : AVCaptureSession <AVCaptureFileOutputRecordingDelegate>
 @property (nonatomic) AVCaptureDevice * __nullable captureVideoDevice;
 @property (nonatomic) AVCaptureDevice * __nullable captureAudioDevice;
+@property (nonatomic) AVCaptureMovieFileOutput * __nullable movieDataOutput;
+@property (nonatomic) UIViewController * __nullable parent;
+@property (nonatomic) CALayer * __nullable imageLayer;
+@property (nonatomic) CALayer * __nullable videoLayer;
+@property (nonatomic) CALayer * __nullable parentLayer;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)setGeneralSettings;
+- (void)startRecording;
+- (void)stopRecording;
+- (void)captureOutput:(AVCaptureFileOutput * __null_unspecified)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL * __null_unspecified)outputFileURL fromConnections:(NSArray * __null_unspecified)connections error:(NSError * __null_unspecified)error;
 @end
 
 
