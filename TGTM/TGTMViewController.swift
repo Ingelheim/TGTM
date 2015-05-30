@@ -1,6 +1,8 @@
 import UIKit
 
 class TGTMViewController : UIViewController {
+    let lipOffRed = UIColor(red: 0.937, green: 0.333, blue: 0.31, alpha: 1)
+    
     var recordButton : RecordButton?
     var flashImage : UIView?
     var countdownLabel : UILabel?
@@ -10,9 +12,7 @@ class TGTMViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-        println(recordButton)
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -30,15 +30,41 @@ class TGTMViewController : UIViewController {
     }
     
     private func createRyanImage() {
-        var ryan = UIImageView(frame: CGRect(x: 0, y: 84, width: self.view.frame.width, height: self.view.frame.height - 84 - 69))
+        var ryan = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 84 - 69))
         ryan.image = UIImage(named: "Ryan")
         self.view.addSubview(ryan)
     }
     
+    // LOGO TOP BAR
     private func createLogoBar() {
-        var logoBar = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 84))
-        logoBar.image = UIImage(named: "LogoBar")
-        self.view.addSubview(logoBar)
+        self.createLogoTopBar()
+        self.createLogoDivider()
+        self.addLipOffLogo()
+    }
+    
+    private func createLogoTopBar() {
+        var logoTopBar = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 35))
+        logoTopBar.backgroundColor = lipOffRed
+        self.view.addSubview(logoTopBar)
+    }
+    
+    private func createLogoDivider() {
+        var logoDivider = UIView(frame: CGRect(x: 0, y: 35, width: self.view.frame.width, height: 3))
+        logoDivider.backgroundColor = UIColor.whiteColor()
+        self.view.addSubview(logoDivider)
+    }
+    
+    private func addLipOffLogo() {
+        let widthOfTotal = 0.55
+        let heightToWidth = 0.22
+        
+        var width = widthOfTotal * Double(self.view.frame.width)
+        var height = width * heightToWidth
+        var xValue = Double(self.view.frame.width / 2) - Double(width / 2)
+        
+        var lipOffLogo = UIImageView(frame: CGRect(x: Int(xValue), y: 11, width: Int(width), height: Int(height)))
+        lipOffLogo.image = UIImage(named: "Logo")
+        self.view.addSubview(lipOffLogo)
     }
     
     private func createBottomBar() {
@@ -61,23 +87,6 @@ class TGTMViewController : UIViewController {
     }
     
     func toggleShareDialog() {
-        
-        
-//        if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"whatsapp://app"]]){
-//            
-//            NSString    *savePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mov"];
-//            
-//            _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:savePath]];
-//            
-//            _documentInteractionController.UTI = @"net.whatsapp.movie";
-//            
-//            _documentInteractionController.delegate = (id)self;
-//            
-//            [_documentInteractionController presentOpenInMenuFromRect:CGRectMake(0, 0, 0, 0) inView:self.view animated: YES];
-//        } else {
-//            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"WhatsApp Not Installed." message:@" WhatsApp is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//            [alert show];
-//        }
         shareDialog!.hidden = !shareDialog!.hidden
     }
     
@@ -98,7 +107,6 @@ class TGTMViewController : UIViewController {
         undo!.addTarget(self, action: Selector("toggleShareDialog"), forControlEvents: UIControlEvents.TouchUpInside)
         undo!.hidden = true
         self.view.addSubview(undo!)
-        
     }
     
     private func createCountDownCounter() {
