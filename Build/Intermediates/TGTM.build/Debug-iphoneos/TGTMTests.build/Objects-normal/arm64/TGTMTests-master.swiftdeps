@@ -1,6 +1,7 @@
 version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
-options: "4aafc86467bebfb01f9a731db7885e70"
+options: "3e94e3a64e917c0a35111510d4eb72a4"
 inputs: 
+- "/Users/Lukas/Desktop/TGTM/TGTM/SelectViewController.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/RecordViewController.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/ShareDialog.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTMTests/RecordButtonTest.swift"

@@ -173,6 +173,16 @@ SWIFT_CLASS("_TtC4TGTM20RecordViewController")
 @end
 
 
+SWIFT_CLASS("_TtC4TGTM20SelectViewController")
+@interface SelectViewController : UIViewController
+@property (nonatomic, readonly) UIColor * __nonnull lipOffRed;
+- (BOOL)prefersStatusBarHidden;
+- (void)viewDidLoad;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC4TGTM11ShareDialog")
 @interface ShareDialog : UIImageView
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;

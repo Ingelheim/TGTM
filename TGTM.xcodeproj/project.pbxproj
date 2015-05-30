@@ -29,6 +29,8 @@
 		80756BA51B04F119009D5A90 /* TGTMCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */; };
 		80756BAB1B04F1AE009D5A90 /* ShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */; };
 		80756BAC1B04F1AE009D5A90 /* ShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */; };
+		80B18B851B19CE93002F5030 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B18B841B19CE93002F5030 /* SelectViewController.swift */; };
+		80B18B861B19CE93002F5030 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B18B841B19CE93002F5030 /* SelectViewController.swift */; };
 		80EEB25A1B063D0B00A32BF9 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 80EEB2591B063D0B00A32BF9 /* test.mov */; };
 		80EEB25B1B063D0B00A32BF9 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 80EEB2591B063D0B00A32BF9 /* test.mov */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,7 @@
 		80756BA01B04DDB6009D5A90 /* SignPainter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter.ttf; sourceTree = "<group>"; };
 		80756BA31B04F119009D5A90 /* TGTMCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTMCaptureSession.swift; sourceTree = "<group>"; };
 		80756BAA1B04F1AE009D5A90 /* ShareDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareDialog.swift; sourceTree = "<group>"; };
+		80B18B841B19CE93002F5030 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		80EEB2591B063D0B00A32BF9 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +177,7 @@
 			children = (
 				80756B8C1B049BFA009D5A90 /* TGTMViewController.swift */,
 				80756B6E1B049417009D5A90 /* RecordViewController.swift */,
+				80B18B841B19CE93002F5030 /* SelectViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -307,6 +311,7 @@
 				80756B6D1B049417009D5A90 /* AppDelegate.swift in Sources */,
 				80756B8D1B049BFA009D5A90 /* TGTMViewController.swift in Sources */,
 				80756B9C1B04D72A009D5A90 /* SocialMediaManager.swift in Sources */,
+				80B18B851B19CE93002F5030 /* SelectViewController.swift in Sources */,
 				80756BAB1B04F1AE009D5A90 /* ShareDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B18B861B19CE93002F5030 /* SelectViewController.swift in Sources */,
 				80756B901B04A145009D5A90 /* RecordViewController.swift in Sources */,
 				80756BAC1B04F1AE009D5A90 /* ShareDialog.swift in Sources */,
 				80756B8F1B04A13C009D5A90 /* RecordButtonTest.swift in Sources */,

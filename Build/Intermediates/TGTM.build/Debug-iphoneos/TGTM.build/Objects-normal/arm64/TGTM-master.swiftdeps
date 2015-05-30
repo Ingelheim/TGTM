@@ -1,5 +1,5 @@
 version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
-options: "30cec4f8ae268be7af6a7d0533b093b1"
+options: "1dc5e88dd27bd9c0c7bc52e0dd8d8f49"
 inputs: 
 - "/Users/Lukas/Desktop/TGTM/TGTM/TGTMCaptureSession.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/RecordButton.swift"
@@ -8,4 +8,5 @@ inputs:
 - "/Users/Lukas/Desktop/TGTM/TGTM/AppDelegate.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/TGTMViewController.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/SocialMediaManager.swift"
+- "/Users/Lukas/Desktop/TGTM/TGTM/SelectViewController.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/ShareDialog.swift"
