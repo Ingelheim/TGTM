@@ -30,12 +30,13 @@ class TGTMViewController : UIViewController {
     }
     
     private func createRyanImage() {
-        var ryan = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 84 - 69))
-        ryan.image = UIImage(named: "Ryan")
+        var ryan = UIView(frame: self.view.frame)
+//        ryan.image = UIImage(named: "Ryan")
+        ryan.backgroundColor = UIColor.blueColor()
         self.view.addSubview(ryan)
     }
     
-    // LOGO TOP BAR
+    // LOGO TOP
     private func createLogoBar() {
         self.createLogoTopBar()
         self.createLogoDivider()
@@ -62,22 +63,43 @@ class TGTMViewController : UIViewController {
         var height = width * heightToWidth
         var xValue = Double(self.view.frame.width / 2) - Double(width / 2)
         
-        var lipOffLogo = UIImageView(frame: CGRect(x: Int(xValue), y: 11, width: Int(width), height: Int(height)))
+        var lipOffLogo = UIImageView(frame: CGRect(x: Int(xValue), y: 8, width: Int(width), height: Int(height)))
         lipOffLogo.image = UIImage(named: "Logo")
         self.view.addSubview(lipOffLogo)
     }
     
+    // BOTTOM
     private func createBottomBar() {
-        var bottomBar = UIImageView(frame: CGRect(x: 0, y: self.view.frame.maxY - 69, width: self.view.frame.width, height: 69))
-        bottomBar.image = UIImage(named: "BottomBar")
-        self.view.addSubview(bottomBar)
+        createBottomBarBackground()
+        createButtomDivider()
+        createWebLinkView()
     }
     
+    private func createButtomDivider() {
+        var bottomDivider = UIView(frame: CGRect(x: 0, y: self.view.frame.maxY - 64, width: self.view.frame.width, height: 4))
+        bottomDivider.backgroundColor = UIColor.whiteColor()
+        self.view.addSubview(bottomDivider)
+    }
+    
+    private func createBottomBarBackground() {
+        var bottomBarBackground = UIView(frame: CGRect(x: 0, y: self.view.frame.maxY - 60, width: self.view.frame.width, height: 60))
+        bottomBarBackground.backgroundColor = lipOffRed
+        self.view.addSubview(bottomBarBackground)
+    }
+    
+    private func createWebLinkView() {
+        var webLink = UIImageView(frame: CGRect(x: self.view.frame.maxX - 110, y: self.view.frame.maxY - 92, width: 98, height: 18))
+        webLink.image = UIImage(named: "Weblink")
+        self.view.addSubview(webLink)
+    }
+    
+    // RECORD BUTTON
     private func createRecordButton() {
-        recordButton = RecordButton(frame: CGRect(x: self.view.frame.midX - 44, y: self.view.frame.maxY - 113, width: 88, height: 88))
+        recordButton = RecordButton(frame: CGRect(x: self.view.frame.midX - 44, y: self.view.frame.maxY - 110, width: 88, height: 88))
         self.view.addSubview(recordButton!)
     }
     
+    // FLASH
     private func createFlashImage() {
         flashImage = UIView(frame: self.view.frame)
         flashImage?.backgroundColor = UIColor.whiteColor()

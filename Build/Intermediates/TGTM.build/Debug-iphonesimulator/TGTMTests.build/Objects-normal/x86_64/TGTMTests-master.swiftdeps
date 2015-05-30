@@ -1,5 +1,5 @@
-version: "Apple Swift version 1.2 (swiftlang-602.0.49.6 clang-602.0.49)"
-options: "356accc227c4d33810f00d53fc9aa3ea"
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "5afbbccd160699102c58baee83aa1f73"
 inputs: 
 - "/Users/Lukas/Desktop/TGTM/TGTM/RecordViewController.swift"
 - "/Users/Lukas/Desktop/TGTM/TGTM/ShareDialog.swift"

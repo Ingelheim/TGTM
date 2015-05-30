@@ -4,27 +4,27 @@ provides:
 nominals:
 - "C4TGTM11AppDelegate"
 class-members:
-- "applicationDidEnterBackground"
-- "application"
-- "applicationWillTerminate"
-- "applicationWillResignActive"
 - "applicationDidBecomeActive"
+- "applicationWillTerminate"
 - "window"
+- "application"
 - "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "applicationDidEnterBackground"
 top-level:
 - "Bool"
-- "UIWindow"
-- !private "BooleanLiteralType"
-- "UIResponder"
-- "UIApplication"
 - "NSObject"
 - "AnyObject"
 - "UIApplicationDelegate"
+- "UIApplication"
+- "UIWindow"
+- !private "BooleanLiteralType"
+- "UIResponder"
 member-access:
-- "PSs9AnyObject"
 - "CSo8NSObject"
 - "C4TGTM11AppDelegate"
 - "PSo21UIApplicationDelegate"
+- "PSs9AnyObject"
 - "CSo11UIResponder"
 dynamic-lookup:
 cross-module:
